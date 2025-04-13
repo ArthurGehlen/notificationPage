@@ -1,0 +1,22 @@
+:root {
+  --important_message_font_color: hsl(219, 12%, 42%);
+  --message_font_color: hsl(219, 14%, 63%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+main {
+  width: 50rem;
+  height: 52rem;
+  margin: 2rem auto;
+  background-color: red;
+}
