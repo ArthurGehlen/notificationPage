@@ -1,0 +1,51 @@
+.notification {
+    background-color: hsl(210, 60%, 98%);
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: .6rem;
+    border-radius: 8px;
+}
+
+.user_name {
+    color: hsl(224, 21%, 14%);
+    cursor: pointer;
+}
+
+.user_name:hover,
+.important_message:hover {
+    color: hsl(219, 85%, 26%);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.important_message {
+    cursor: pointer;
+    color: hsl(219, 12%, 42%);
+}
+
+.group {
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+
+.new_notification_identifier {
+    height: .4rem;
+    width: .4rem;
+    background-color: hsl(1, 90%, 64%);
+    border-radius: 50%;
+}
+
+.date {
+    font-size: .8rem;
+    color: hsl(219, 14%, 63%);
+}

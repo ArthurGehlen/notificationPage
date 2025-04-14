@@ -1,3 +1,4 @@
+// Images
 import avatar_angela from './assets/images/avatar-angela-gray.webp'
 import avatar_anna from './assets/images/avatar-anna-kim.webp'
 import avatar_jacob from './assets/images/avatar-jacob-thompson.webp'
@@ -6,15 +7,7 @@ import avatar_mark from './assets/images/avatar-mark-webber.webp'
 import avatar_nathan from './assets/images/avatar-nathan-peterson.webp'
 import avatar_rizky from './assets/images/avatar-rizky-hasanuddin.webp'
 
-const users = [
-  { name: 'Angela Gray', avatar: avatar_angela },
-  { name: 'Anna Kim', avatar: avatar_anna },
-  { name: 'Jacob Thompson', avatar: avatar_jacob },
-  { name: 'Kimberly Smith', avatar: avatar_kimberly },
-  { name: 'Mark Webber', avatar: avatar_mark },
-  { name: 'Nathan Peterson', avatar: avatar_nathan },
-  { name: 'Rizky Hasanuddin', avatar: avatar_rizky }
-]
+import Notification from './components/Notification'
 
 import './App.css'
 
@@ -37,15 +30,31 @@ function App() {
         </header>
 
         <section className='notifications_section'>
-          
+          <Notification
+            avatar={avatar_mark}
+            user_name='Mark Webber '
+            message='reacted to your recent post '
+            important_message='My first tournament today! '
+            is_new='is_new'
+            date='1m ago'
+          />
+          <Notification
+            avatar={avatar_angela}
+            user_name='Angela Gray '
+            message='followed you '
+            is_new='is_new'
+            date='5m ago'
+          />
+          <Notification
+            avatar={avatar_jacob}
+            user_name='Jacob Thompson '
+            message='has joined your group '
+            group='Chess Club'
+            is_new='is_new'
+            date='1 day ago'
+          />
         </section>
       </main>
-      {/* {users.map((user, index) => (
-        <div key={index}>
-          <p>{user.name}</p>
-          <img src={user.avatar} alt='Avatar' width='50px' />
-        </div>
-      ))} */}
     </>
   )
 }

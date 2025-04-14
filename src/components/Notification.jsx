@@ -2,11 +2,11 @@ import './notification.css'
 
 function Notification({ avatar, user_name, message, important_message, group, is_new, date }) {
     return (
-        <div className={`notification ${is_new}`}>
-            <img src={avatar} alt="Avatar" width='50px' />
+        <div className='notification'>
+            <img src={avatar} alt="Avatar" width='40px' />
 
             <div className="content">
-                <p>
+                <p className='message'>
                     <strong className='user_name'>
                         {user_name}
                     </strong>
@@ -16,13 +16,13 @@ function Notification({ avatar, user_name, message, important_message, group, is
                     </span>
 
                     {group && 
-                        <span className='group'>
+                        <strong className='group'>
                             {group}
-                        </span>}
+                        </strong>}
                     {important_message &&
-                        <span className='important_message'>
+                        <strong className='important_message'>
                             {important_message}   
-                        </span>}
+                        </strong>}
                     {is_new &&
                         <div className="new_notification_identifier"></div>    
                     }
