@@ -1,19 +1,55 @@
+:root {
+    --new_notification_bg_color: hsl(210, 60%, 98%);
+    --new_notification_id_bg_color: hsl(1, 90%, 64%);
+
+    --user_name_font_color: hsl(224, 21%, 14%);
+    --important_message_font_color: hsl(219, 12%, 42%);
+    --user_name_important_message_font_color_hover: hsl(219, 85%, 26%);
+
+    --group_font_color: hsl(219, 85%, 26%);
+    --date_font_color: hsl(219, 14%, 63%);
+    --global_span_font_color: hsl(219, 14%, 63%);
+
+    --private_message_font_color: hsl(219, 12%, 42%);
+    --private_message_border_color: hsl(211, 68%, 94%);
+}
+
 .notification {
-    background-color: hsl(210, 60%, 98%);
     display: grid;
     grid-template-columns: 10% 90%;
-    padding: .6rem;
+    padding: 1rem;
+    transition: .4s ease all;
+}
+
+.new_notification {
     border-radius: 8px;
+    background-color: var(--new_notification_bg_color);
+}
+
+.new_notification_identifier {
+    height: .4rem;
+    width: .4rem;
+    background-color: var(--new_notification_id_bg_color);
+    border-radius: 50%;
+}
+
+.commented {
+    grid-template-columns: 10% 80% 10%;
+}
+
+.outdated .content .message {
+    display: inline;
+    word-break: break-word;
 }
 
 .user_name {
-    color: hsl(224, 21%, 14%);
+    color: var(--user_name_font_color);
     cursor: pointer;
 }
 
 .user_name:hover,
 .important_message:hover {
-    color: hsl(219, 85%, 26%);
+    color: var(--user_name_important_message_font_color_hover);
 }
 
 .content {
@@ -23,29 +59,42 @@
 }
 
 .message {
-    display: flex;
+    display: inline-flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: .4rem;
 }
 
 .important_message {
     cursor: pointer;
-    color: hsl(219, 12%, 42%);
+    color: var(--important_message_font_color);
 }
 
 .group {
-    color: hsl(219, 85%, 26%);
+    color: var(--group_font_color);
     cursor: pointer;
 }
 
-.new_notification_identifier {
-    height: .4rem;
-    width: .4rem;
-    background-color: hsl(1, 90%, 64%);
-    border-radius: 50%;
+span {
+    color: var(--global_span_font_color);
 }
 
 .date {
     font-size: .8rem;
-    color: hsl(219, 14%, 63%);
+    color: var(--date_font_color);
+}
+
+.private_message .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.private_message .content .message {
+    padding: 1rem;
+    border: 1px solid var(--private_message_border_color);
+    color: var(--private_message_font_color);
+    border-radius: 10px;
+    line-break: strict;
+    white-space: pre;
 }

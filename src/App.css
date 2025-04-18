@@ -2,12 +2,6 @@
   --body_bg_color: hsl(210, 60%, 98%);
   --main_bg_color: hsl(0, 0%, 100%);
 
-  
-  --important_message_font_color: hsl(211, 68%, 94%);
-  --message_font_color: hsl(219, 14%, 63%);
-  --username_font_color: hsl(224, 21%, 14%);
-
-
   --button_font_color: hsl(219, 12%, 42%);
   --button_font_color_hover: hsl(219, 85%, 26%);
 
@@ -30,7 +24,7 @@ body {
 }
 
 main {
-  width: 47rem;
+  width: 85%;
   height: 52rem;
   padding: 1.5rem;
   border-radius: 15px;
@@ -73,8 +67,9 @@ header button:hover {
 }
 
 .notifications_section {
+  height: calc(100% - 3rem);
   margin-top: 1.5rem;
   display: flex;
-  gap: .6rem;
+  justify-content: space-between;
   flex-direction: column;
 }
